@@ -1,0 +1,133 @@
+.formContainer {
+  display: inline-block;
+  margin-left: 12%;
+  width: 40%;
+}
+
+.detailContainer {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+}
+.detailContainer > div {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.information {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+.information > div {
+  margin-top: 5%;
+}
+
+.card {
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background-color: white;
+  display: inline-block;
+  width: 80%;
+  margin-left: 7%;
+  color: black;
+}
+
+.form {
+  margin-bottom: 3%;
+}
+
+.form > label {
+  display: block;
+  font-weight: bold;
+  opacity: 70%;
+  margin-bottom: 2%;
+}
+input {
+  height: 20px;
+  width: 95%;
+  border: 3px solid rgba(154, 154, 154, 0.3);
+  border-radius: 3px;
+}
+
+input:focus {
+  outline: 3px solid rgb(194, 194, 33);
+  border: none;
+  border-radius: 3px;
+}
+textarea {
+  width: 96%;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(154, 154, 154, 0.3);
+  resize: none;
+}
+textarea:focus {
+  outline: none;
+  background-color: rgba(194, 194, 33, 0.2);
+}
+
+.buttonContainer > button {
+  border: none;
+  padding: 3% 10%;
+  border-radius: 3px;
+  margin-top: 1.5%;
+  margin-left: 48%;
+  background-color: rgb(194, 194, 33);
+  color: white;
+  font-weight: bold;
+}
+
+.icons {
+  width: 20px;
+  fill: rgb(194, 194, 33);
+}
+
+.iconContainer {
+  display: inline-block;
+  margin-right: 2%;
+  vertical-align: middle;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: auto;
+  margin-top: 25%;
+}
+
+.socialIcons {
+  width: 20px;
+  fill: rgb(194, 194, 33);
+  padding: 7px 7px 7px 7px;
+  transition: 0.1s ease-out;
+}
+
+.socialIconsIn {
+  width: 72px;
+  fill: rgb(194, 194, 33);
+}
+
+.socialContainer:hover .socialIcons {
+  stroke: rgb(194, 194, 33);
+  fill: inherit;
+  border-radius: 50%;
+  padding: 7px 7px 7px 7px;
+  background-color: rgb(194, 194, 33);
+}
+
+@media screen and (max-width: 600px) {
+  .formContainer {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .detailContainer {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+}

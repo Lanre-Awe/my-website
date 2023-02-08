@@ -1,0 +1,41 @@
+/* .mainContainer {
+  /* background-color: yellow; */
+
+.title {
+  font-size: larger;
+  font-weight: bold;
+  margin-right: 1%;
+}
+
+.link {
+  font-style: italic;
+  font-weight: lighter;
+}
+.gitlink {
+  font-style: italic;
+  font-weight: lighter;
+}
+.gitlink > a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.icon {
+  fill: rgb(194, 194, 33);
+}
+
+.icon:hover {
+  fill: rgb(147, 147, 16);
+}
+
+.gitlink > a:hover {
+  color: rgb(194, 194, 33);
+}
+.link > a:hover {
+  color: rgb(194, 194, 33);
+}
+
+.guide {
+  display: flex;
+  align-items: center;
+}

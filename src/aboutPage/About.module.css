@@ -1,0 +1,55 @@
+.heading {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.imgContainer {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 250px;
+}
+.imgContainer > img {
+  width: 100%;
+  height: inherit;
+  border-radius: 20px;
+}
+
+.description {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.contactButton {
+  background-color: rgb(194, 194, 33);
+  border: none;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+.link {
+  font-style: italic;
+  color: rgb(132, 132, 15);
+}
+
+.link:hover {
+  color: rgb(194, 194, 33);
+}
+@media screen and (max-width: 600px) {
+  .imgContainer {
+    width: 40%;
+    height: 150px;
+  }
+  .imgContainer > img {
+    border-radius: 50%;
+  }
+  .description {
+    width: 80%;
+  }
+}

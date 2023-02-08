@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, Suspense, useState } from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
+import Navigation from "./frontPage/Navigation";
+import SideMenu from "./frontPage/SideMenu";
+import Modal from "./UI/Modal";
+import React from "react";
+import Loader from "./UI/Loader";
+
+const HomePage = React.lazy(() => import("./pages/homePage"));
+const AboutPage = React.lazy(() => import("./pages/AboutPage"));
+const ContactPage = React.lazy(() => import("./pages/ContactPage"));
+const ProjectPage = React.lazy(() => import("./pages/ProjectPage"));
+const GalleryPage = React.lazy(() => import("./pages/galleryPage"));
 
 function App() {
+  const [openModal, setOpenModal] = useState(false);
+
+  const setMenu = () => {
+    setOpenModal((prevState) => !prevState);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Suspense fallback={<Loader />}>
+        {openModal && (
+          <Modal>
+            <SideMenu onClose={setMenu} />
+          </Modal>
+        )}
+        <Navigation onOpen={setMenu} />
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/home" />
+          </Route>
+          <Route path="/home">
+            <HomePage mode={openModal} />
+          </Route>
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+          <Route path="/gallery">
+            <GalleryPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
+          </Route>
+          <Route path="/project">
+            <ProjectPage />
+          </Route>
+        </Switch>
+      </Suspense>
+    </Fragment>
   );
 }
 

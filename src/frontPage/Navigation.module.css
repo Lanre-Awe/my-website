@@ -56,6 +56,10 @@ a:active {
   .burgerContainer {
     display: inline-block;
   }
+  .nav {
+    justify-content: space-between;
+    margin: 2% 3% 0% 3%;
+  }
   .nav button {
     margin-left: 10%;
   }

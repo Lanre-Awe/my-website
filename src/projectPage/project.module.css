@@ -1,10 +1,39 @@
-/* .mainContainer {
-  /* background-color: yellow; */
-
+.mainContainer {
+  /* animation: project 1s ease-out forwards; */
+}
 .title {
   font-size: larger;
   font-weight: bold;
   margin-right: 1%;
+}
+.container:nth-of-type(odd) {
+  animation: odd 1.5s ease-out forwards;
+}
+.container:nth-of-type(even) {
+  animation: even 1.5s ease-out forwards;
+}
+
+@keyframes odd {
+  0% {
+    transform: translateX(-120%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes even {
+  0% {
+    transform: translateX(120%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .link {

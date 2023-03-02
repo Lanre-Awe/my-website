@@ -5,6 +5,7 @@ import SideMenu from "./frontPage/SideMenu";
 import Modal from "./UI/Modal";
 import React from "react";
 import Loader from "./UI/Loader";
+import NotFound from "./pages/NotFound";
 
 const HomePage = React.lazy(() => import("./pages/homePage"));
 const AboutPage = React.lazy(() => import("./pages/AboutPage"));
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route path="/project">
             <ProjectPage />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </Suspense>

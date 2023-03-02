@@ -3,6 +3,7 @@
   margin-right: auto;
   width: fit-content;
   text-align: center;
+  font-variant: small-caps;
 }
 .titleContainer {
   display: inline-block;
@@ -11,15 +12,23 @@
   margin-right: 7%;
   margin-top: 7%;
   width: 40%;
+  animation: desc 1s ease-out forwards;
 }
 .titleContainer > span {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+  font-variant: small-caps;
 }
 .imageContainer {
   display: inline-block;
   width: 37%;
+  margin-top: 2.5%;
+  border-top: 2px solid rgb(194, 194, 33);
+  border-left: 2px solid rgb(194, 194, 33);
+  border-right: 2px solid rgb(194, 194, 33);
+  border-bottom: 2px solid rgb(194, 194, 33);
+  animation: image 1s ease-out forwards;
 }
 .imageContainerMin {
   display: none;
@@ -30,12 +39,13 @@
   height: 130px;
   margin-top: 5%;
   margin-left: 30%;
+  border-radius: 5px;
+  transition: all ease 0.5s;
 }
 .imageContainer > img {
   display: inline-block;
   width: 100%;
-  height: 450px;
-  margin-top: 5%;
+  height: 452px;
 }
 .project {
   margin-top: 10%;
@@ -66,12 +76,43 @@
   }
 }
 
+@keyframes desc {
+  0% {
+    transform: translateX(-120%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes image {
+  0% {
+    transform: translateX(120%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .sideMenu > ul > li {
   list-style: none;
   text-decoration: none;
   margin-top: 25%;
+  margin-right: 10%;
   text-align: center;
   font-size: 2rem;
+  font-variant: small-caps;
+}
+.sideMenu > ul {
+  width: 68%;
+  margin: 0 auto;
+}
+.typed {
+  color: rgb(194, 194, 33);
 }
 .sideMenu > ul > li > a {
   color: rgb(194, 194, 33);
@@ -115,6 +156,7 @@
   }
   .imageContainerMin {
     display: block;
+    margin-bottom: 8%;
   }
 
   .imageContainer {
@@ -124,6 +166,12 @@
     margin-left: 2%;
   }
   .description {
-    margin-left: 2%;
+    margin-left: 3%;
+  }
+  .mainContainer {
+    margin-top: 20%;
+  }
+  .titleContainer > span {
+    margin-left: 3%;
   }
 }

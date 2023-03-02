@@ -8,8 +8,8 @@
   width: 20%;
   margin-left: auto;
   margin-right: auto;
-
   height: 250px;
+  animation: image 1s ease-out forwards;
 }
 .imgContainer > img {
   width: 100%;
@@ -22,6 +22,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  animation: desc 1s ease-out forwards;
 }
 
 .contactButton {
@@ -41,6 +42,30 @@
 .link:hover {
   color: rgb(194, 194, 33);
 }
+
+@keyframes desc {
+  0% {
+    transform: translateX(-120%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes image {
+  0% {
+    transform: translateX(120%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @media screen and (max-width: 600px) {
   .imgContainer {
     width: 40%;

@@ -19,6 +19,7 @@ const MainPage = (props) => {
           typeSpeed={80}
           backSpeed={50}
           loop
+          className={classes.typed}
         />
 
         <p className={classes.description}>

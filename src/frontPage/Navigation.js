@@ -25,7 +25,7 @@ const Navigation = (props) => {
         <NavLink to="/gallery" activeClassName={classes.active}>
           <li>gallery</li>
         </NavLink>
-        <NavLink to="project" activeClassName={classes.active}>
+        <NavLink to="/project" activeClassName={classes.active}>
           <li>projects</li>
         </NavLink>
       </ul>

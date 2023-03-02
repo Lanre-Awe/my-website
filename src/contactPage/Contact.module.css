@@ -124,10 +124,14 @@ textarea:focus {
     width: 95%;
     margin: 0 auto;
   }
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
 
   .detailContainer {
     display: block;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 }

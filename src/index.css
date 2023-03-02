@@ -14,6 +14,7 @@ button:hover {
 a {
   text-decoration: none;
   color: white;
+  font-variant: small-caps;
 }
 html {
   width: 100vw;

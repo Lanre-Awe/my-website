@@ -5,6 +5,12 @@ const ImageDisplay = (props) => {
     <>
       <div className={classes.imgContainer}>
         <img src={props.src} alt="" />
+        <div
+          className={classes.cover}
+          onClick={() => props.onPreview(props.src, props.desc)}
+        >
+          <p>view</p>
+        </div>
         <div className={classes.desc}>{props.desc}</div>
       </div>
     </>

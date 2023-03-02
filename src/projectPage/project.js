@@ -3,6 +3,7 @@ import classes from "./project.module.css";
 import todoIcon from "../todoIcon.png";
 import twitterIcon from "../twitterIcon.png";
 import trolley from "../trolley.png";
+import jokes from "../dadjokes.png";
 
 const projects = [
   {
@@ -11,7 +12,7 @@ const projects = [
     icon: trolley,
     githubLink: "github.com/Lanre-Awe/E-commerce",
     projectDescription:
-      "A project very dear to my heart. This app was built using ReactJs, Redux toolkit, Routing and Firebase. Firebase used for authentication, as well as database collection. DISCLAIMER SITE ONLY OPTIMIZED FOR LAPTOPS AND DESKTOP; STYLES WOULD BE DISORIENTING ON MOBILE",
+      "A project very dear to my heart. This app was built using ReactJs, Redux toolkit, Routing and Firebase. Firebase used for authentication, as well as database collection",
   },
 
   {
@@ -30,6 +31,14 @@ const projects = [
     projectDescription:
       "A Single Page Application, clone (look-alike) of twitter. Made entirely with Reactjs. utilizing routing for SPA functionality; using redux for state management; as well as localStorage to persist data. Basic CRUD fumctionality, uploading of images as tweets and comments etc. are present in this clone. ENJOY  ",
   },
+  {
+    projectTitle: "DAD JOKES",
+    projectLink: "dad-j-o-k-e-s.netlify.app",
+    icon: jokes,
+    githubLink: "github.com/Lanre-Awe/Dad-jokes",
+    projectDescription:
+      "A project consuming APIs. Getting the jokes and the ability to share on your twitter page",
+  },
 ];
 
 const Project = () => {
@@ -37,8 +46,8 @@ const Project = () => {
     <div className={classes.mainContainer}>
       {projects.map((item) => {
         return (
-          <Card key={item.projectTitle}>
-            <div>
+          <div key={item.projectTitle} className={classes.container}>
+            <Card>
               <div className={classes.guide}>
                 <span className={classes.title}>{item.projectTitle}</span>
                 <img src={item.icon} alt="" />
@@ -71,8 +80,8 @@ const Project = () => {
                 </a>
               </div>
               <p>{item.projectDescription}</p>
-            </div>
-          </Card>
+            </Card>
+          </div>
         );
       })}
     </div>

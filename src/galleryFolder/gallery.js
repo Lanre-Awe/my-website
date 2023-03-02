@@ -16,6 +16,8 @@ import vid2 from "./videos/vid2.mp4";
 import vid3 from "./videos/vid3.mp4";
 import vid4 from "./videos/vid4.mp4";
 import VideoDisplay from "./videoDisplay";
+import Modal from "../UI/Modal";
+import { useState } from "react";
 const IMGSRC = [
   {
     id: 1,
@@ -58,8 +60,29 @@ const VIDSRC = [
 ];
 
 const Gallery = () => {
+  const [show, setShow] = useState(false);
+  const [previewImage, setPreviewImage] = useState(false);
+  const [previewDesc, setPreviewDesc] = useState(false);
+
+  const showPreview = (image, desc) => {
+    setShow(true);
+    setPreviewImage(image);
+    setPreviewDesc(desc);
+  };
+  const closePreview = () => {
+    setShow(false);
+  };
   return (
     <>
+      {show && (
+        <Modal onClose={closePreview}>
+          <div className={classes.preview}>
+            <img src={previewImage} alt="" />
+            <button>X</button>
+            <div>{previewDesc}</div>
+          </div>
+        </Modal>
+      )}
       <div className={classes.heading}>
         <h2>Welcome to Awe's Gallery</h2>
       </div>
@@ -68,7 +91,12 @@ const Gallery = () => {
       </div>
       {IMGSRC.map((item) => {
         return (
-          <ImageDisplay src={item.src} desc={item.description} key={item.id} />
+          <ImageDisplay
+            src={item.src}
+            desc={item.description}
+            key={item.id}
+            onPreview={showPreview}
+          />
         );
       })}
 
